@@ -8,9 +8,9 @@ if(!empty($_SESSION['logged']))
 
 
 try{
-     $stmt = $conn->prepare("SELECT ID, ToolName
-     						FROM stocktools
-							ORDER BY ID");
+     $stmt = $conn->prepare("SELECT ToolName, ToolDesc, ToolLive, HasTool, ToolStock
+							 FROM stocktools
+							 ");
      $stmt->execute();
 
      $results = $stmt->fetchALL(PDO::FETCH_ASSOC);

@@ -8,8 +8,9 @@ if(!empty($_SESSION['logged']))
 
 
 try{
-     $stmt = $conn->prepare("SELECT ID, ToolName
-     						FROM stocktools
+     $stmt = $conn->prepare("SELECT stockproducts.ID, CommonName, Unit, produnits.Abbrev
+							FROM stockproducts, produnits
+							WHERE (stockproducts.Unit = produnits.ID)
 							ORDER BY ID");
      $stmt->execute();
 
