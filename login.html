@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[PYMAQ] LOGIN</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/log.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/log.js"></script>
+    <style type="text/css">
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<!-- BEGIN # BOOTSNIP INFO -->
+<div class="container">
+	<div class="row">
+        <p style="margin-top: 35px" class="text-center"><img height="105" width="207" src="img/logo.jpg"></p>
+		<h1 style="color: white;" class="text-center"><u>Portal Producción</u><br><br></h1>
+        <p class="text-center"><a href="#" class="btn btn-default btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Iniciar Sesión</a></p>
+	</div>
+</div>
+<!-- END # BOOTSNIP INFO -->
+
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<img class="img" id="img_logo" src="img/logo.jpg">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form id="login-form" method="POST">
+		                <div class="modal-body">
+				    		<div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Ingresar Usuario y Contraseña</span>
+                            </div>
+				    		<input id="login_username" name="login_username" class="form-control" type="text" placeholder="Usuario" required>
+				    		<input id="login_password" name="login_password" class="form-control" type="password" placeholder="Contraseña" required>
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+                            </div>
+				    	    <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Sin Contraseña?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Solicitar Registro</button>
+                            </div>
+				        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" method="POST" style="display:none;">
+    	    		    <div class="modal-body">
+		    				<div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Recuperar Contraseña.</span>
+                            </div>
+		    				<input id="lost_email" name="lost_email" class="form-control" type="email" placeholder="Ingresar E-Mail" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Iniciar Sesión</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Solicitar Registro</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" method="FORM" style="display:none;">
+            		    <div class="modal-body">
+		    				<div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Registrar información de contacto.</span>
+                            </div>
+                            <p class="text-info"><span class="text-danger"><u>Esta es un área de acceso limitado.</span></u><br>Por favor, envíe sus datos para evaluación de su registro. Nosotros nos pondremos en contacto.</p>
+		    				<input id="register_username" class="form-control" type="text" placeholder="Nombre" required>
+                            <input id="register_email" class="form-control" type="email" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Ingresar una contraseña" required>
+                            <input id="register_company" class="form-control" type="text" placeholder="Compañía" required>
+            			</div>
+		    		    <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Iniciar Sesión</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Sin Contraseña?</button>
+                            </div>
+		    		    </div>
+                    </form>
+                    <!-- End | Register Form -->
+                    
+                </div>
+                <!-- End # DIV Form -->
+                
+			</div>
+		</div>
+	</div>
+    <!-- END # MODAL LOGIN -->
+</body>
+</html>
